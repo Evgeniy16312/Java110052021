@@ -17,7 +17,7 @@ public class Assistant {
         Assistant.assistantCount = assistantCount;
     }
 
-    Assistant (String fio, String post, String email, long number, int salary, int age) {
+    Assistant(String fio, String post, String email, long number, int salary, int age) {
         assistantCount++;
         this.fio = fio;
         this.post = post;
@@ -25,9 +25,7 @@ public class Assistant {
         this.number = number;
         this.salary = salary;
         this.age = age;
-        }
-
-
+    }
 
     public String getFio() {
         return fio;
@@ -81,6 +79,7 @@ public class Assistant {
         this.salary = salary;
     }
 
-
-
+    public void print(){
+        System.out.println(this);
+    }
 }
