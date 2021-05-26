@@ -79,7 +79,7 @@ public class Assistant {
         this.salary = salary;
     }
 
-    public void print(){
+    public void print() {
         System.out.println(this);
     }
 }
