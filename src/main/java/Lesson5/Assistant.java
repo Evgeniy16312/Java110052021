@@ -9,13 +9,15 @@ public class Assistant {
     private int salary;
     private int age;
 
-    public static int getAssistantCount () {
+    public static int getAssistantCount() {
         return assistantCount;
     }
 
+    public static void setAssistantCount(int assistantCount) {
+        Assistant.assistantCount = assistantCount;
+    }
 
-
-    public Assistant(String fio, String post, String email, long number, int salary, int age) {
+    Assistant (String fio, String post, String email, long number, int salary, int age) {
         assistantCount++;
         this.fio = fio;
         this.post = post;
@@ -25,9 +27,6 @@ public class Assistant {
         this.age = age;
         }
 
-        public void info () {
-            System.out.println("FIO" + fio);
-    }
 
 
     public String getFio() {
@@ -49,4 +48,39 @@ public class Assistant {
             this.age = age;
         }
     }
+
+    public String getPost() {
+        return post;
+    }
+
+    public void setPost(String post) {
+        this.post = post;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public long getNumber() {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+
+
 }
