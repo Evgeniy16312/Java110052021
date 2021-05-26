@@ -27,6 +27,16 @@ public class Assistant {
         this.age = age;
     }
 
+    @Override
+    public String toString () {
+        return String.format("ФИО: %s \t Должность: %s \n Электронная почта: %s \t Номер телефона: %s \n Зарплата: %d  руб.\t Возраст: %d лет. \n", fio,post,email,number,salary,age);
+    }
+
+    public void print1 () {
+        System.out.println(this);
+    }
+
+
     public String getFio() {
         return fio;
     }

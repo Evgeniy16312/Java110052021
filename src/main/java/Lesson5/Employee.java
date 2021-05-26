@@ -22,7 +22,7 @@ public class Employee {
     // это переопределенный метод
     @Override
     public String toString() {
-        return String.format("Имя: %s \tДолжность: %s \nEmail: %s \t Номер телефона: %s \n Зарплата: %d \t Возраст: %d \n",
+        return String.format("Имя: %s \t Должность: %s \n Email: %s \t Номер телефона: %s \n Зарплата: %d руб. \t  Возраст: %d лет. \n ",
                 name, position, email, phone_number, salary, age);
     }
 
