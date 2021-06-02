@@ -2,14 +2,22 @@ package Lesson7;
 
 public class Plate {
 
-    int food;
+    private int food;
 
     public Plate(int food) {
         this.food = food;
     }
 
-    public void decreaseFood(int n) {
-        food -= n;
+    public boolean decreaseFood(int appetite) {
+        if (food < appetite) {
+            return false;
+        }
+        food -= appetite;
+        return true;
+    }
+
+    public void appendFood (int foodValue) {
+        food += foodValue;
     }
 
     public void info() {
