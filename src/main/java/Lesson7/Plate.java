@@ -8,15 +8,11 @@ public class Plate {
         this.food = food;
     }
 
-    public boolean decreaseFood(int appetite) {
-        if (food < appetite) {
-            return false;
-        }
+    public void decreaseFood(int appetite) {
         food -= appetite;
-        return true;
     }
 
-    public void appendFood (int foodValue) {
+    public void appendFood(int foodValue) {
         food += foodValue;
     }
 
@@ -24,4 +20,7 @@ public class Plate {
         System.out.println("Plate: " + food);
     }
 
+    public int getFood() {
+        return food;
+    }
 }

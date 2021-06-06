@@ -12,8 +12,9 @@ public class Cat {
     }
 
     public void eat(Plate plate) {
-        full = plate.decreaseFood(appetite);
-        if (full) {
+        if (appetite <= plate.getFood()) {
+            plate.decreaseFood(appetite);
+            full = true;
             System.out.println("Кот " + name + " покушал. Сытость: " + full);
         } else {
             System.out.println("Кот " + name + " не покушал. Сытость: " + full);
