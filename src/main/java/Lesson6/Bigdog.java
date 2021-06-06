@@ -1,12 +1,11 @@
 package Lesson6;
 
-public class Cat extends Animal {
-
+public class Bigdog extends Animal {
     int maxRun;
     int maxSwim;
     double maxJump;
 
-    public Cat(String name, int maxRun, int maxSwim, double maxJump) {
+    public Bigdog(String name, int maxRun, int maxSwim, double maxJump) {
         super(name);
         this.maxRun = maxRun;
         this.maxSwim = maxSwim;
@@ -22,8 +21,8 @@ public class Cat extends Animal {
     }
 
     public void swim(int lenght) {
-        if (lenght > 0) {
-            System.out.println(" Кошки не умеют плавать!");
+        if ((lenght >= 0) && (lenght <= maxSwim)) {
+            System.out.println(this.name + " Бежит: " + maxSwim);
         }
     }
 
