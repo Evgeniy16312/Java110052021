@@ -5,9 +5,10 @@ public class HomeWork {
     static final int HALF = SIZE / 2;
 
     public static void main(String[] args) {
+        float[] arr1 = fillingTheArray(SIZE);
         float[] arr = fillingTheArray(SIZE);
         timerSingleThread(arr);
-        timerMultiThread(arr);
+        timerMultiThread(arr1);
     }
 
     public static float[] fillingTheArray(int size) {
@@ -23,6 +24,7 @@ public class HomeWork {
         for (int i = 0; i < array.length; i++) {
             array[i] = (float) (array[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
+        System.out.println(array[15000]);
         System.out.println(System.currentTimeMillis() - a);
     }
 
@@ -46,7 +48,7 @@ public class HomeWork {
 
         System.arraycopy(arr1, 0, array, 0, HALF);
         System.arraycopy(arr2, 0, array, HALF, HALF);
+        System.out.println(array[15000]);
         System.out.println("Два потока справились за: " + (System.currentTimeMillis() - a));
     }
-
 }
