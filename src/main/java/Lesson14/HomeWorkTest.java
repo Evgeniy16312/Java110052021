@@ -18,8 +18,9 @@ class HomeWorkTest {
     @Test
     void method1LastElement() {
         int[] actual = HomeWork.method1(new int[]{2, 8, 7, 2, 4, 3, 9, 9, 0, 1});
-        Assertions.assertEquals(1,actual[actual.length - 1]);
-        }
+        Assertions.assertEquals(1, actual[actual.length - 1]);
+    }
+
     @Test
     void method1FirstElement() {
         int[] actual = HomeWork.method1(new int[]{2, 8, 7, 2, 4, 3, 9, 9, 0, 1});
@@ -27,8 +28,26 @@ class HomeWorkTest {
     }
 
     @Test
-    void method2() {
-    boolean actual = HomeWork.method2(new int[]{1, 1, 4, 4, 1});
-    Assertions.assertTrue(true, String.valueOf(actual));
+    void method2True() {
+        boolean actual = HomeWork.method2(new int[]{1, 1, 4, 4, 1});
+        Assertions.assertTrue(true, String.valueOf(actual));
+    }
+
+    @Test
+    void methodFalse1() {
+        boolean actual = HomeWork.method2(new int[]{1, 1, 1, 1, 1, 1});
+        Assertions.assertFalse(false, String.valueOf(actual));
+    }
+
+    @Test
+    void methodFalse2() {
+        boolean actual = HomeWork.method2(new int[]{4, 4, 4, 4});
+        Assertions.assertFalse(false, String.valueOf(actual));
+    }
+
+    @Test
+    void methodFalse3() {
+        boolean actual = HomeWork.method2(new int[]{1, 4, 4, 1, 1, 4, 3});
+        Assertions.assertFalse(false, String.valueOf(actual));
     }
 }
